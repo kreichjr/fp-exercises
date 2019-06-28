@@ -11,4 +11,7 @@ import { filter } from '.';
 
 export default function reject(array, predicate) {
   // Your code here
+  return filter(array, (value) => {
+    return !predicate(value)
+  })
 }

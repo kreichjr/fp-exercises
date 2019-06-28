@@ -13,4 +13,15 @@ callback function over each item in the input collection.
 
 export default function each(collection, callback) {
   // Your code here
+  
+  if (Array.isArray(collection) === true || typeof(collection) === "string") {
+    for (var i = 0; i < collection.length; i++) {
+      callback(collection[i], i, collection);
+    }
+  } else if (typeof(collection) === "object") {
+  	for (const key of Object.keys(collection)) {
+  	  callback(collection[key], key, collection);
+  	}
+  }
 }
+

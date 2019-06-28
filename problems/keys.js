@@ -10,4 +10,9 @@ import { each } from '.';
 
 export default function keys(object) {
   // Your code here
+  let keyList = []
+  for (const key of Object.keys(object)) {
+  	keyList.push(key)
+  }
+  return keyList;
 }

@@ -14,4 +14,11 @@ import { each } from '.';
 
 export default function filter(array, predicate) {
   // Your code here
+  let filteredArray = []
+  each(array, (value, index, collection) => {
+    if (predicate(value) === true) {
+      filteredArray.push(value)
+    }
+  })
+  return filteredArray;
 }
