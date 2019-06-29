@@ -9,9 +9,9 @@ import { each } from '.';
 export default function append(list, item) {
   // Your code here
   let appendedList = []
-  for (const listItem of list) {
-  	appendedList.push(listItem)
-  }
+  each(list, (value, key, collection) => {
+    appendedList.push(value)
+  })
   appendedList.push(item)
 
   return appendedList;

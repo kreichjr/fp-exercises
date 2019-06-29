@@ -11,11 +11,11 @@ export default function pick(object, keys) {
   // Your code here
   let returnedObj = {};
   
-  for (let [key, value] of Object.entries(object)) {
+  each(object, (value, key, collection) => {
   	if (keys.includes(key)) {
       returnedObj[key] = value
   	}
-  }
+  })
 
   return returnedObj;
 }

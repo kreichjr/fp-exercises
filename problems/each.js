@@ -19,7 +19,7 @@ export default function each(collection, callback) {
       callback(collection[i], i, collection);
     }
   } else if (typeof(collection) === "object") {
-  	for (const key of Object.keys(collection)) {
+  	for (const key in collection) {
   	  callback(collection[key], key, collection);
   	}
   }

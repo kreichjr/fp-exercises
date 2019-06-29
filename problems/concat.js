@@ -13,20 +13,26 @@ export default function concat(listA, listB) {
   if (typeof(listA) != typeof(listB) && (Array.isArray(listA) === false || Array.isArray(listB) === false))
   	return "Error - Type Mismatch"
 
-  let newList = []
-
-  for (let i = 0; i < listA.length; i++) {
-	  newList.push(listA[i])
-	}
-	for (let j = 0; j < listB.length; j++) {
-	  newList.push(listB[j])
-	}
-
   if (typeof(listA) == "object") {
-	return newList
-	
+	  let newList = []
+    each(listA, (value, key, collection) => {
+      newList.push(value)
+    })
+    each(listB, (value, key, collection) => {
+      newList.push(value)
+    })
+    return newList
+
+    
   } else if (typeof(listA) == "string") {
-    return newList.join('')
+    let newString = ""
+    each(listA, (value, key, collection) => {
+      newString += value
+    })
+    each(listB, (value, key, collection) => {
+      newString += value
+    })
+    return newString
 
   }
 }
