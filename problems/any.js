@@ -11,4 +11,7 @@ import { identity, all } from '.';
 
 export default function any(array, predicate = identity) {
   // Your code here
+  return !all(array, (val) => {
+  	return !predicate(val)
+  })
 }

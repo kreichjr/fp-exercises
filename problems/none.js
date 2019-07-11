@@ -8,4 +8,5 @@ import { identity, any } from '.';
 
 export default function none(array, predicate = identity) {
   // Your code here
+  return !any(array, predicate)
 }

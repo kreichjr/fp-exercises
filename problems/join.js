@@ -10,4 +10,8 @@ import { dec, reduce } from '.';
 
 export default function join(array, separator) {
   // Your code here
+  let returnString = reduce(array, (joinedStr, char) => {
+  	return joinedStr.toString() + separator.toString() + char.toString() 
+  })
+  return returnString
 }

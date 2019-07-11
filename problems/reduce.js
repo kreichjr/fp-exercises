@@ -24,4 +24,21 @@ import { each } from '.';
 
 export default function reduce(list, iterator, accumulator) {
   // Your code here
+  let returnValue = undefined
+  if (accumulator != undefined) {
+  	returnValue = accumulator
+  	each(list, (value, key, collection) => {
+  	  returnValue = iterator(returnValue, value, key, collection)
+  	})
+  } else {
+  	each(list, (value, key, collection) => {
+  	  if (key == 0) {
+  	  	returnValue = value
+  	  }
+      else {
+  	    returnValue = iterator(returnValue, value, key, collection)
+  	  }
+  	})
+  }
+  return returnValue;
 }

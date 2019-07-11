@@ -8,4 +8,5 @@ iterator when the user does not pass one in, this will be handy.
 
 export default function identity(val) {
   // Your code here
+  return val
 }
