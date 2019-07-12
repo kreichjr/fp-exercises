@@ -1,6 +1,6 @@
 import { sum } from '../problems';
 
-xdescribe('sum', () => {
+describe('sum', () => {
   it('should sum an array of numbers together', () => {
     expect(sum([1, 2, 3])).toBe(6);
     expect(sum([-1, 2, -3])).toBe(-2);

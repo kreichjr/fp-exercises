@@ -1,6 +1,6 @@
 import { mean } from '../problems';
 
-xdescribe('mean', () => {
+describe('mean', () => {
   it('should calculate the mean of an array of numbers', () => {
     expect(mean([1, 2, 3, 4, 5])).toBe(3);
     expect(mean([5, 4, 3, 2, 1])).toBe(3);

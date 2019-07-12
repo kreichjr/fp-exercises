@@ -3,7 +3,7 @@ import { any } from '../problems';
 const identity = val => val;
 const isEven = n => n % 2 === 0;
 
-xdescribe('any', () => {
+describe('any', () => {
   it('should fail by default for an empty collection', () => {
     expect(any([])).toBe(false);
   });

@@ -3,7 +3,7 @@ import { all } from '../problems';
 const identity = val => val;
 const isEven = num => num % 2 === 0;
 
-xdescribe('all', () => {
+describe('all', () => {
   it('passes by default for an empty collection', () => {
     expect(all([], identity)).toBe(true);
   });

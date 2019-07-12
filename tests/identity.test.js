@@ -1,6 +1,6 @@
 import { identity } from '../problems';
 
-xdescribe('identity', () => {
+describe('identity', () => {
   const uniqueObject = {};
 
   it('should return whatever value is passed into it', () => {

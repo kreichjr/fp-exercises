@@ -4,7 +4,7 @@ const identity = val => val;
 const add = (a, b) => a + b;
 const sumSquares = (a, b) => add(a, b ** 2);
 
-xdescribe('reduce', () => {
+describe('reduce', () => {
   it('should be able to sum up an array', () => {
     const total = reduce([1, 2, 3], add, 0);
 

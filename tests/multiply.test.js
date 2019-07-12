@@ -1,6 +1,6 @@
 import { multiply } from '../problems';
 
-xdescribe('multiply', () => {
+describe('multiply', () => {
   it('should multiply two numbers together', () => {
     expect(multiply(2, 3)).toBe(6);
     expect(multiply(-2, 5)).toBe(-10);

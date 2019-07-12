@@ -10,5 +10,5 @@ import { add, reduce } from '.';
 
 export default function sum(array) {
   // Your code here
-  return reduce(array, (total, number) => {return add(total, number)})
+  return reduce(array, add)
 }

@@ -10,6 +10,8 @@ import { each } from '.';
 
 export default function reverse(list) {
   // Your code here
+  
+  /* OLD CODE
   if (typeof(list) != "string" && !Array.isArray(list)) {
   	return "Error - Invalid Type"
   }
@@ -28,4 +30,23 @@ export default function reverse(list) {
     }
     return newList
   }
+  END OF OLD CODE */ 
+
+  if (typeof(list) == "object") {
+    let reversedObj = []
+    each(list, (value, index, collection) => {
+      reversedObj.unshift(value)
+    })
+    return reversedObj
+  } else if (typeof(list) == "string") {
+    let reversedStr = ""
+    each(list, (value, index, collection) => {
+      reversedStr = value + reversedStr
+    })
+    return reversedStr
+  }
+
+
+
+ 
 }

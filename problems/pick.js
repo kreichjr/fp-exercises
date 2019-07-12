@@ -11,10 +11,12 @@ export default function pick(object, keys) {
   // Your code here
   let returnedObj = {};
   
-  each(object, (value, key, collection) => {
-  	if (keys.includes(key)) {
-      returnedObj[key] = value
-  	}
+  each(object, (objValue, objKey, objCollection) => {
+  	each(keys, (keysValue, keysKey, keysCollection) => {
+      if (objKey == keysValue) {
+        returnedObj[keysValue] = objValue
+  	  }
+  	})
   })
 
   return returnedObj;

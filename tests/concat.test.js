@@ -1,6 +1,6 @@
 import { concat } from '../problems';
 
-xdescribe('concat', () => {
+describe('concat', () => {
   it('should concat two strings together', () => {
     expect(concat('', '')).toEqual('');
     expect(concat('a', 'bc')).toEqual('abc');

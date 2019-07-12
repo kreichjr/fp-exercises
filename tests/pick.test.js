@@ -1,6 +1,6 @@
 import { pick } from '../problems';
 
-xdescribe('pick', () => {
+describe('pick', () => {
   it('should pick a list of properties out of an object', () => {
     expect(pick({ a: 1, b: 2, c: 3, d: 4 }, ['b', 'c'])).toEqual({ b: 2, c: 3 });
     expect(pick({ a: 1, b: 2, c: 3, d: 4 }, [])).toEqual({});

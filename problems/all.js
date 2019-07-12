@@ -9,11 +9,7 @@ import { identity, reduce } from '.';
 
 export default function all(array, predicate = identity) {
   // Your code here
-  let outcomeBool = reduce(array, (acc, value) => {
-  	if (predicate(value)) {
-  	  return acc
-  	}
-  	return false
+  return reduce(array, (acc, value) => {
+  	return (acc && !!predicate(value))
   }, true)
-  return outcomeBool
 }

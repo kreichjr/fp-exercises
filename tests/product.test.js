@@ -1,6 +1,6 @@
 import { product } from '../problems';
 
-xdescribe('product', () => {
+describe('product', () => {
   it('should calculate the product of an array of numbers', () => {
     expect(product([1, 2, 3, 4])).toBe(24);
     expect(product([-1, 2, -3])).toBe(6);

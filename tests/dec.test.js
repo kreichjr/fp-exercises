@@ -1,6 +1,6 @@
 import { dec } from '../problems';
 
-xdescribe('dec', () => {
+describe('dec', () => {
   it('should decrement a number', () => {
     expect(dec(-5)).toBe(-6);
     expect(dec(0)).toBe(-1);

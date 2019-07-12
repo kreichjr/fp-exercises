@@ -14,4 +14,10 @@ import { keys, reduce } from '.';
 
 export default function equals(valA, valB) {
   // Your code here
+  let valAKeys = keys(valA)
+  let returnValue = reduce(valAKeys, (acc, value) => {
+  	return (acc && (valA[value] == valB[value]))
+  }, true)
+  return returnValue
+
 }

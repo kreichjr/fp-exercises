@@ -3,7 +3,7 @@ import { filter } from '../problems';
 const isEven = num => num % 2 === 0;
 const isOdd = num => num % 2 !== 0;
 
-xdescribe('filter', () => {
+describe('filter', () => {
   it('should return all even numbers in an array', () => {
     const evens = filter([1, 2, 3, 4, 5, 6], isEven);
 

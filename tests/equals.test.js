@@ -1,6 +1,6 @@
 import { equals } from '../problems';
 
-xdescribe('equals', () => {
+describe('equals', () => {
   it('should compare two values', () => {
     expect(equals(1, 1)).toBe(true);
     expect(equals(1, 2)).toBe(false);

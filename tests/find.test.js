@@ -1,6 +1,6 @@
 import { find } from '../problems';
 
-xdescribe('find', () => {
+describe('find', () => {
   it('should return the first matching value in an array', () => {
     const list = [2, 4, 6, 8];
     const predicate = val => val > 5;

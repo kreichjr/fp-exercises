@@ -24,6 +24,7 @@ import { each } from '.';
 
 export default function reduce(list, iterator, accumulator) {
   // Your code here
+  /* OLD CODE
   let returnValue = undefined
   if (accumulator != undefined) {
   	returnValue = accumulator
@@ -41,4 +42,21 @@ export default function reduce(list, iterator, accumulator) {
   	})
   }
   return returnValue;
+  END OLD CODE */
+
+  let returnValue = undefined
+  
+  if (accumulator != undefined) {
+    returnValue = accumulator  
+  }
+
+  each(list, (value, key, collection) => {
+    if (returnValue != undefined) {
+      returnValue = iterator(returnValue, value, key, collection)
+    } else {
+      returnValue = value
+    }
+  })
+
+  return returnValue
 }

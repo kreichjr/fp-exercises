@@ -1,6 +1,6 @@
 import { append } from '../problems';
 
-xdescribe('append', () => {
+describe('append', () => {
   it('should append an item to the end of a list', () => {
     expect(append([1, 2, 3], 4)).toEqual([1, 2, 3, 4]);
   });

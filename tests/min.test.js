@@ -1,6 +1,6 @@
 import { min } from '../problems';
 
-xdescribe('min', () => {
+describe('min', () => {
   it('should return the larger of two arguments', () => {
     expect(min(1, 2)).toBe(1);
     expect(min(2, 1)).toBe(1);

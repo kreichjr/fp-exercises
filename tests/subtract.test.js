@@ -1,6 +1,6 @@
 import { subtract } from '../problems';
 
-xdescribe('subtract', () => {
+describe('subtract', () => {
   it('should subtract two numbers together', () => {
     expect(subtract(5, 2)).toBe(3);
     expect(subtract(2, -3)).toBe(5);

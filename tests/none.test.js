@@ -3,7 +3,7 @@ import { none } from '../problems';
 const identity = val => val;
 const isOdd = num => num % 2 !== 0;
 
-xdescribe('none', () => {
+describe('none', () => {
   it('passes by default for an empty collection', () => {
     expect(none([], identity)).toBe(true);
   });

@@ -1,6 +1,6 @@
 import { divide } from '../problems';
 
-xdescribe('divide', () => {
+describe('divide', () => {
   it('should divide two numbers together', () => {
     expect(divide(10, 2)).toBe(5);
     expect(divide(10, -2)).toBe(-5);
