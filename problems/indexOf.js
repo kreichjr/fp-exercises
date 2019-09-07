@@ -11,4 +11,18 @@ import { each, slice, equals, reduce } from '.';
 
 export default function indexOf(list, target) {
   // Your code here
+  
+  let foundIndex = false
+  let indexValue = -1
+
+  each(list, (value, index, collection) => {
+    if (!foundIndex) {
+      if (equals(target, value)) {
+      	foundIndex = true
+      	indexValue = index
+      }
+    }
+  })
+
+  return indexValue
 }

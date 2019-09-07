@@ -14,10 +14,15 @@ import { keys, reduce } from '.';
 
 export default function equals(valA, valB) {
   // Your code here
-  let valAKeys = keys(valA)
-  let returnValue = reduce(valAKeys, (acc, value) => {
-  	return (acc && (valA[value] == valB[value]))
-  }, true)
-  return returnValue
-
+  if (typeof(valA) != "object") {
+  	return (valA === valB)
+  } else {
+  	if (Array.isArray(valA) !== Array.isArray(valB)) {
+  	  return false
+  	}
+  	let valAKeys = keys(valA)
+  	return reduce(valAKeys, (acc, value) => {
+  	  return (acc && !(valA[value] !== valB[value]))
+  	}, true)
+  }
 }
