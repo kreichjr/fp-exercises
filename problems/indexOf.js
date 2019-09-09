@@ -16,11 +16,11 @@ export default function indexOf(list, target) {
   let indexValue = -1
 
   each(list, (value, index, collection) => {
-    if (!foundIndex) {
-      if (equals(target, value)) {
-      	foundIndex = true
-      	indexValue = index
-      }
+    if (!foundIndex && equals(target, value)) {
+      
+      foundIndex = true
+      indexValue = index
+      
     }
   })
 

@@ -12,4 +12,13 @@ import { each, indexOf, equals } from '.';
 
 export default function includes(collection, target) {
   // Your code here
+
+  if (indexOf(collection, target) != -1) {
+  	return true
+  }
+
+  return false
+
+
+
 }
