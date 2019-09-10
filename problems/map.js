@@ -13,4 +13,25 @@ import { each } from '.';
 
 export default function map(collection, iterator) {
   // Your code here
+  if (typeof(collection) == "object" && collection === null) {
+  	return false //Should be an error
+  }
+
+  // Check to see if the collection is an array or object
+  if (Array.isArray(collection)) {
+    let newMap = []
+  	each(collection, (value, index, collection_two) => {
+      newMap.push(iterator(value))
+  })
+  return newMap
+  } else {
+  	//Collection isn't an array, so assume it's an object
+  	let newMap = {}
+  	each(collection, (value, index, collection_two) => {
+  	  newMap[index] = iterator(value)
+  	})
+
+  	return newMap
+  }
+  
 }
