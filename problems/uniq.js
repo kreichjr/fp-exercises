@@ -10,4 +10,13 @@ import { each, includes } from '.';
 
 export default function uniq(array) {
   // Your code here
+  let newArray = []
+  
+  each(array, (value, index, collection) => {
+  	if (!includes(newArray, value)) {
+  	  newArray.push(value)
+  	}
+  })
+
+  return newArray
 }
