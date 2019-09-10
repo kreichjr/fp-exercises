@@ -14,7 +14,7 @@ import { each } from '.';
 export default function map(collection, iterator) {
   // Your code here
   if (typeof(collection) == "object" && collection === null) {
-  	return false //Should be an error
+  	return undefined //Should be an error
   }
 
   // Check to see if the collection is an array or object

@@ -11,4 +11,13 @@ import { map } from '.';
 
 export default function pluck(array, key) {
   // Your code here
+  return map(array, (arrayObj) => { 
+  	//Check if array object is not a valid object, and if so, check if it's null
+  	if (typeof(arrayObj) != "object" || arrayObj === null) {
+  	  return undefined
+  	}
+
+  	return arrayObj[key] 
+  })
+
 }
